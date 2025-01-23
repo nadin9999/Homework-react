@@ -1,0 +1,39 @@
+.secondSection{
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+.Description{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: "Roboto", serif;
+
+}
+.PriceList{
+    display: flex;
+    gap: 20px;
+}
+#P3{
+    font-size: 15px;
+    font-weight: 300;
+}
+#P4{
+    font-size: 15px;
+    font-weight: 700;
+
+}
+#P5, #P6{
+    font-size: 15px;
+    font-weight: 400;
+}
+#P5{
+    text-decoration: line-through;
+}
+#P6{
+color: #CF2929;
+}
+.ImageSection{
+    display: flex;
+    gap: 22px;
+}

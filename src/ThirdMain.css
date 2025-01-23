@@ -1,0 +1,23 @@
+#P1{
+    font-family: "Roboto", serif;
+    font-size: 20px;
+    font-weight: 900;
+}
+#P2{
+    font-family: "Roboto", serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.firstSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.ThirdMain{
+    padding: 111px 228px ;
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+}
