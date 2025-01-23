@@ -1,0 +1,16 @@
+.SecondMain{
+height: 579px;
+display: flex;
+padding: 121px 229px 11px 230px;
+gap: 30px;
+}
+.FirstSection{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+#SecondSectionImage{
+width: 552px;
+height: 574px; 
+object-fit: cover;
+}

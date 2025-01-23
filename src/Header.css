@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.Header {
+    padding: 20px 235px 20px 223px;
+    width: 83px;
+    display: flex;
+    gap: 146px;
+}
+h1{
+    color: #22262A;
+    font-size: 26px;
+    font-family: "Roboto", serif;
+    font-weight: 800;
+    
+}
+.SecondBlock{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+      color: rgba(34, 38, 42, 1.00);
+      font-family: "Roboto", "serif";
+       font-weight: 430;
+       font-size: 18px
+}
+.ThirdBlock{
+     width: 148px;
+      height: 18.00px; 
+      margin-top: 5px;
+}
