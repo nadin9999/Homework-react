@@ -9,7 +9,7 @@ const Modal = ({ onClose }) => {
                 <button onClick={onClose} className='OnCloseButton'>✕</button>
                 <input type="name" className="input" placeholder="Введите имя" />
                 <input type="password" className="input" placeholder="Введите пароль" />
-                <button type='submit'>Авторизоваться</button>
+                <button type='submit' className='ModalButton'>Авторизоваться</button>
                 <LoginModal />
             </div>
         </div>

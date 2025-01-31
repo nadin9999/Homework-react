@@ -1,26 +1,27 @@
 import { useState, useEffect } from "react";
 
-const LoginModal = () => {
-    const [seconds, setSeconds] = useState(200);
-  
-    useEffect(() => {
-        const interval = setInterval(() => {
-          setSeconds((prev) => {
-            if (prev > 0) {
-              return prev - 1;
-            } else {
-              clearInterval(interval);
-              return 0;
-            }
-          });
-        }, 1000);
-    
-        return () => {
+const LoginModal = ({ onClose }) => {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds((prev) => {
+        if (prev < 200) {
+          return prev + 1;
+        } else {
+          alert("Время вышло!");
           clearInterval(interval);
-          alert("Выполнено размонтирование компоненты");
-          
-        };
-      }, []);
+          onClose();
+          return 200;
+        }
+      });
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+      alert("Выполнено размонтирование компоненты");
+    };
+  }, [onClose]);
 
 
   return (
