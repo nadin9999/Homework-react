@@ -1,0 +1,28 @@
+.Footer{
+background-image: url(../../image/Background.image.png);
+height: 100vh;
+}
+.Footer__child{
+    padding: 434px 937px 129px 230px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Paragraph1{
+    font-family: "Roboto", serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+.Paragraph2{
+    font-family: "Roboto", serif;
+    font-size: 80px;
+    font-weight: 800;
+}
+.ButtonFooter{
+    width: 214px;
+    height: 35px;
+    background-color: #22262A;
+    color: white;
+    cursor: pointer;
+    margin-top: 27px;
+}

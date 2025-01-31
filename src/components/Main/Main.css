@@ -1,36 +1,42 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-.Main{
-background-image: url(./image/background_image.png);
-height:745px;
+
+.Main {
+    background-image: url(../../image/background_image.png);
+    height: 745px;
 }
-.MainSection{
+
+.MainSection {
     display: flex;
     flex-direction: column;
     padding: 426px 231px 90px 909px;
     font-family: "Roboto", serif;
 }
-#H2, #H3{
+
+#H2,
+#H3 {
     font-size: 18px;
     font-weight: 600;
 }
-#H1{
+
+#H1 {
     font-size: 80px;
     font-weight: 800;
 }
 
-.ButtonSection{
+.ButtonSection {
     display: flex;
     gap: 34px;
 }
-button{
-  width: 147px;
-  height: 35px;
-  background-color: #22262A;
-  color: white;
-  cursor: pointer;
-  margin-top: 27px;
+
+.buttonMain {
+    width: 147px;
+    height: 35px;
+    background-color: #22262A;
+    color: white;
+    cursor: pointer;
+    margin-top: 27px;
 }

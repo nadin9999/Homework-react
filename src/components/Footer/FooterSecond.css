@@ -1,0 +1,88 @@
+.FooterSecond {
+    height: 100vh;
+    display: flex;
+    gap: 196px;
+    justify-content: center;
+    align-items:  center;
+    font-family: "Roboto", serif;
+    background-color: #F2F8FC;
+}
+
+.FooterSecond__child {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.Paragraph3 {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.Paragraph4 {
+    font-size: 15px;
+    font-weight: 380;
+}
+
+.Location {
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+    font-weight: 380;
+}
+
+#ImageIcon {
+    width: 109px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.FooterSecond__childSecond {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.List {
+    margin-top: 46px;
+    display: flex;
+    gap: 88px;
+}
+
+#Input2 {
+    width: 532px;
+    height: 45px;
+    padding: 11px 23px 11px 24px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px 10px rgba(198, 198, 198, 0.3);
+
+}
+
+#Input2::placeholder {
+    color: black;
+    font-family: "Roboto", serif;
+    font-weight: 380;
+}
+
+.List__child {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    font-size: 15px;
+    font-weight: 380;
+}
+
+.List__childH1 {
+    font-weight: 700;
+}
+.lastFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 93px;
+    background-color: #E7F5F8;
+    font-family: "Roboto", serif;
+    font-weight: 380;
+     font-size: 15px;
+}

@@ -1,11 +1,12 @@
-import image from './image/search HEART shopping-cart.png';
-import './Header.css';
+import image from "../../image/search HEART shopping-cart.png";
+import "./Header.css"
 
-function HeaderComponent() {
+function HeaderComponent({onOpenModal}) {
+
   return (
     <div className="Header">
 
-      <div className="FirstBlock"><h1>YOUR LOGO</h1></div>
+      <h1>YOUR LOGO</h1>
 
       <div className="SecondBlock">
         <p>HOME</p>
@@ -15,11 +16,11 @@ function HeaderComponent() {
         <p>PAGES</p>
         <p>BLOG</p>
       </div>
-
-      <div className="ThirdBlock">
+      
         <img src={image} alt="" />
 
-      </div>
+      
+      <button onClick={onOpenModal} className="login-button">Войти</button>
 
     </div>
 

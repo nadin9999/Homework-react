@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.Header {
+    display: flex;
+    align-items: center;
+    gap: 146px;
+    margin-left: 100px;
+    height: 80px;
+}
+
+h1 {
+    color: #22262A;
+    font-size: 26px;
+    font-family: "Roboto", serif;
+    font-weight: 800;
+
+}
+
+.SecondBlock {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    color: rgba(34, 38, 42, 1.00);
+    font-family: "Roboto", "serif";
+    font-weight: 430;
+    font-size: 18px
+}
+
+.ThirdBlock {
+    width: 148px;
+    height: 18.00px;
+    margin-top: 5px;
+}
+.login-button{
+    width: 100px;
+    background-color: black;
+    color: aliceblue;
+    width: 100px;
+    height: 35px;
+   
+}
