@@ -21,7 +21,7 @@ h1 {
 
 }
 
-.SecondBlock {
+ul {
     display: flex;
     gap: 30px;
     align-items: center;
@@ -43,4 +43,13 @@ h1 {
     width: 100px;
     height: 35px;
    
+}
+.link{
+    text-decoration: none;
+    font-size: 18px;
+    color: #22262A;
+}
+.active-link{
+    color: brown;
+    text-decoration: underline;
 }
