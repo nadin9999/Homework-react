@@ -3,7 +3,7 @@ import image from "../../image/search HEART shopping-cart.png";
 import "./Header.css"
 
 const routes = [
-  { path: "/", title: "HOME" },
+  { path: "/Home", title: "HOME" },
   { path: "/Shop", title: "SHOP" },
   { path: "/Lookbook", title: "LOOKBOOK" },
   { path: "/features", title: "FEATURES" },

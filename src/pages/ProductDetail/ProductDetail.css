@@ -1,0 +1,17 @@
+.MainCard{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.currentProduct{
+    width: 350px;
+}
+.buttonClose{
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
