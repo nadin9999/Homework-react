@@ -7,7 +7,7 @@ import { Shop } from "./pages/Shop/Shop";
 import { LookBook } from "./pages/Lookbook/Lookbook";
 import { Features } from "./pages/Features/Features";
 import { Pages } from "./pages/Pages/Pages";
-import { Blog } from "./pages/Blog/Blog";
+import { Cart } from "./pages/Cart/Cart";
 import { ProductDetail } from "./pages/ProductDetail";
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
           <Route path="/LOOKBOOK" element={<LookBook />} />
           <Route path="/FEATURES" element={<Features />} />
           <Route path="/PAGES" element={<Pages />} />
-          <Route path="/Blog" element={<Blog />} />
+          <Route path="/Cart" element={<Cart />} />
         <Route path="/product/:productId" element={<ProductDetail/>}/>
         <Route path="*" element={<Home/>}/>
         </Routes>

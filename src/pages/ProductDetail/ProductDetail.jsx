@@ -18,12 +18,19 @@ export function ProductDetail() {
         }
     }, []);
 
+    const AddToCart = ()=>{
+  redirect("/cart", {
+    state:{product_ID: productId}
+  })
+    }
+
     return (
         <main className="MainCard">
             <img src={currentProduct.img} className="currentProduct"/>
             <p id="P3">{currentProduct.type}</p>
             <p id="P4">{currentProduct.title}</p>
             <p id="P6">price:{currentProduct.price}$</p>
+            <button onClick={AddToCart} className="AddtoCart">Добавить в корзину</button>
             <button onClick={()=>redirect(-1)} className="buttonClose">←</button>
         </main>
     )

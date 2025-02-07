@@ -8,7 +8,7 @@ const routes = [
   { path: "/Lookbook", title: "LOOKBOOK" },
   { path: "/features", title: "FEATURES" },
   { path: "/pages", title: "PAGES" },
-  { path: "/blog", title: "BLOG" }
+  { path: "/cart", title: "CART" }
 ];
 
 function HeaderComponent({ onOpenModal }) {
