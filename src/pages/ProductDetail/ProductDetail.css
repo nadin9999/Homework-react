@@ -10,16 +10,20 @@
     width: 350px;
 }
 .buttonClose{
-    font-size: 40px;
+    font-size: 35px;
     background: none;
     border: none;
     cursor: pointer;
 }
 .AddtoCart{
-    width: 150px;
-    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    width: 160px;
+    font-size: 16px;
+    padding: 5px;
     background-color: white;
-    border: 1px solid gray;
-    border-radius: 15px;
+    border: 0;
+    border-radius: 10px;
     cursor: pointer;
+    color: brown;
 }

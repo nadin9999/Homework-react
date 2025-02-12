@@ -1,37 +1,38 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { ShopProductMock } from "../../mock/Shop.mock";
+import "./ProductDetail.css";
 
-
-import "./ProductDetail.css"
-
-export function ProductDetail() {
+export function ProductDetail({ cart, setCart }) {
     const { productId } = useParams();
-    const [currentProduct, setCurrentProduct] = useState({})
-   const redirect = useNavigate()
-    useEffect(() => {
-        if (productId) {
-            const product = ShopProductMock.find(
-                (item) => item.id === Number(productId)
-            );
-            if (product) setCurrentProduct(product)
-        }
-    }, []);
+    const navigate = useNavigate();
 
-    const AddToCart = ()=>{
-  redirect("/cart", {
-    state:{product_ID: productId}
-  })
-    }
+    const currentProduct = ShopProductMock.find(
+        (item) => item.id === Number(productId)
+    );
+
+    const addToCart = () => {
+        if (!currentProduct) return;
+        const existingProduct = cart.find((item) => item.id === currentProduct.id);
+
+        if (existingProduct) {
+            setCart(cart.map((item) =>
+                item.id === currentProduct.id ? { ...item, quantity: item.quantity + 1 } : item
+            ));
+        } else {
+            setCart([...cart, { ...currentProduct, quantity: 1 }]);
+        }
+
+        navigate("/cart");
+    };
 
     return (
         <main className="MainCard">
-            <img src={currentProduct.img} className="currentProduct"/>
-            <p id="P3">{currentProduct.type}</p>
-            <p id="P4">{currentProduct.title}</p>
-            <p id="P6">price:{currentProduct.price}$</p>
-            <button onClick={AddToCart} className="AddtoCart">Добавить в корзину</button>
-            <button onClick={()=>redirect(-1)} className="buttonClose">←</button>
+            <img src={currentProduct?.img} className="currentProduct" />
+            <p id="P3">{currentProduct?.type}</p>
+            <p id="P4">{currentProduct?.title}</p>
+            <p id="P6">Цена: {currentProduct?.price}$</p>
+            <button onClick={addToCart} className="AddtoCart">Добавить в корзину</button>
+            <button onClick={() => navigate(-1)} className="buttonClose">←</button>
         </main>
-    )
+    );
 }
