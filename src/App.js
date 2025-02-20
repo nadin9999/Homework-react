@@ -1,34 +1,47 @@
-import { Route, BrowserRouter, Routes } from "react-router-dom";
-import { useState } from "react";
-import Header from "./components/Header/Header";
-import Modal from "./components/ModalWindow/Modal";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "./pages/Home/Home";
 import { Shop } from "./pages/Shop/Shop";
 import { LookBook } from "./pages/Lookbook/Lookbook";
 import { Features } from "./pages/Features/Features";
 import { Pages } from "./pages/Pages/Pages";
 import { Cart } from "./pages/Cart/Cart";
-import { ProductDetail } from "./pages/ProductDetail/ProductDetail";
+import Layout from './components/Layout/Layout';
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [cart, setCart] = useState([]);
+  const routes = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout><Home /></Layout>,
+    },
+    {
+      path: "/Shop",
+      element: <Layout><Shop /></Layout>,
+    },
+    {
+      path: "/lookbook",
+      element: <Layout><LookBook /></Layout>,
+    },
+    {
+      path: "/features",
+      element: <Layout><Features /></Layout>,
+    },
+    {
+      path: "/pages",
+      element: <Layout><Pages /></Layout>,
+    },
+    {
+      path: "/cart",
+      element: <Layout><Cart /></Layout>,
+    },
+    {
+      path: "*", // Обработчик для всех несуществующих маршрутов
+      element: <Home />
+    }
+  ]);
+
   return (
     <div>
-      <BrowserRouter>
-        <Header onOpenModal={() => setIsModalOpen(true)} />
-        {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
-        <Routes>
-          <Route path="/HOME" element={<Home />} />
-          <Route path="/SHOP" element={<Shop />} />
-          <Route path="/LOOKBOOK" element={<LookBook />} />
-          <Route path="/FEATURES" element={<Features />} />
-          <Route path="/PAGES" element={<Pages />} />
-          <Route path="/Cart" element={<Cart cart={cart} setCart={setCart} />} />
-          <Route path="/product/:productId" element={<ProductDetail cart={cart} setCart={setCart} />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={routes} />
     </div>
   );
 }

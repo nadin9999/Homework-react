@@ -5,10 +5,11 @@ import FourMain from "../../components/FourMain/FourMain"
 import MainComponent from "../../components/Main/Main"
 import SecondMain from "../../components/SecondMain/SecondMain"
 import ThirdMain from "../../components/ThirdMain/ThirdMain"
+import Header from "../../components/Header/Header"
 
 export const Home = ()=>{
     return(<div>
-
+        <Header/>
         <MainComponent />
         <SecondMain />
         <ThirdMain />
